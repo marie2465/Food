@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.myitschool.newtravel.login.LoginActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/red">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="4"
+            android:alpha="1"
+            android:background="@drawable/fon1"
+            android:contentDescription="@string/empty_description"
+            android:padding="10dp"
+            android:scaleType="centerCrop" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:shadowColor="@color/colorAccent"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="5"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/Blue_night"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:contentDescription="@string/empty_description"
+                android:src="@raw/kuchen2" />
+            <LinearLayout
+                android:id="@+id/loginlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:visibility="gone"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffffff">
+                    <EditText
+                        android:id="@+id/input_mail_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mail"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#ffffff">
+
+                    <EditText
+                        android:id="@+id/input_pass_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="#ffffff"
+                        android:textColorHint="#ffffff" />
+                </android.support.design.widget.TextInputLayout>
+                <com.dd.processbutton.FlatButton
+                    android:id="@+id/ok_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:text="@string/login"
+                    android:textColor="@android:color/white"
+                    custom:pb_colorNormal="@android:color/holo_blue_light"
+                    custom:pb_colorPressed="@android:color/holo_blue_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/signup_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="25dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/Blue_night">
+
+                    <EditText
+                        android:id="@+id/input_name_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@color/Blue_night"
+                        android:textColorHint="@color/Blue_night" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/Blue_night">
+
+                    <EditText
+                        android:id="@+id/input_num_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone_number"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@color/Blue_night"
+                        android:textColorHint="@color/Blue_night" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/Blue_night">
+
+                    <EditText
+                        android:id="@+id/input_e_mail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mail"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="@color/Blue_night"
+                        android:textColorHint="@color/Blue_night" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/Blue_night">
+
+                    <EditText
+                        android:id="@+id/input_pass_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/Blue_night"
+                        android:textColorHint="@color/Blue_night" />
+                </android.support.design.widget.TextInputLayout>
+
+                <com.dd.processbutton.FlatButton
+                    android:id="@+id/ok_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/Blue_night"
+                    android:padding="10dp"
+                    android:text="@string/signup"
+                    android:textColor="@android:color/white"
+                    custom:pb_colorNormal="@android:color/holo_blue_light"
+                    custom:pb_colorPressed="@android:color/holo_blue_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/signup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:text="Signup | "
+                    android:textColor="@color/Blue_night" />
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="left"
+                    android:text="@string/login"
+                    android:textColor="@color/Blue_night" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

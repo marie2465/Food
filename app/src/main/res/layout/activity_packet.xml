@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/empty_description"
+                android:scaleType="centerCrop"
+                android:src="@drawable/delhi"
+                tools:layout_editor_absoluteX="42dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:id="@+id/cafe_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-bold"
+                android:padding="10dp"
+                android:text="@string/sample_state"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="26dp"
+                tools:layout_editor_absoluteY="207dp" />
+
+            <com.ms.square.android.expandabletextview.ExpandableTextView
+                android:id="@+id/expand_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#666666"
+                    android:fontFamily="@android:string/VideoView_error_button"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@id/expand_collapse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/empty_description"
+                    android:padding="16dp" />
+            </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_1"
+                android:backgroundTint="#000000"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="284dp">
+
+                <TextView
+                    android:id="@+id/commentary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="info"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_1"
+                android:backgroundTint="#000000"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="284dp">
+
+                <TextView
+                    android:id="@+id/count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="info"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_1"
+                android:backgroundTint="#000000"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="284dp"
+                android:id="@+id/call">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="@string/empty_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/phone"/>
+
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="info"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow_1"
+                android:backgroundTint="#000000"
+                android:orientation="horizontal"
+                android:id="@+id/packets">
+                <CircleMenu.CircleMenuView
+                    android:id="@+id/circle_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:button_colors="@array/colors"
+                    app:button_icons="@array/icons"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
